@@ -5,12 +5,12 @@ import toolState from '../store/toolState';
 import Brush from '../tools/Brush';
 import canvasState from '../store/canvasState';
 const Canvas = observer(() => {
-  const canvasRef = useRef()
+  const canvasRef = useRef();
 
   useEffect(() => {
-    canvasState.setCanvas(canvasRef.current)    
-    toolState.setTool(new Brush(canvasRef.current))
-  }, [])
+    canvasState.setCanvas(canvasRef.current);
+    toolState.setTool(new Brush(canvasRef.current));
+  }, []);
   
   return (
     <div className='canvas'>
